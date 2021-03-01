@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            // 세개의 직선 길이를 받고 삼각형이 되는지 판별하는 예제 
+            // 큰변의 길이가  짧은두선의 길이의 합보다 작아야 삼각형이됨
+            function solution(a, b, c){
+                let answer="YES"
+                let max = 0;
+                if(a > b) {
+                    max = a;
+                } else {
+                    max = b;
+                }
+
+                if(c > max) {
+                    max = c;
+                }
+
+                let total = a + b + c;
+
+                if(total - max <= max) {
+                    answer = 'NO';
+                };
+
+
+                return answer;
+            }
+
+            console.log(solution(20, 33, 14));
+        </script>
+    </body>
+</html>
